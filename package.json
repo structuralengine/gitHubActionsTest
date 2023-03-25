@@ -62,7 +62,7 @@
     "jquery-ui-pack": "^1.12.3",
     "jszip": "^2.5.0",
     "ngx-print": "~1.2.1",
-    "pqgrid": "file:./paramquery-8.4.0/",
+    "pqgrid": "~8.4.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "webpack": "^5.75.0",
