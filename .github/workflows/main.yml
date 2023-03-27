@@ -2,7 +2,7 @@ name: Node CI
 
 on:
   push: 
-    branches: master
+    branches: main
 
 jobs:
   build:
@@ -16,11 +16,11 @@ jobs:
     - name: Install NPM packages
       run: npm install
     - name: Build website
-      run: npm run build-action
+      run: ng build --configuration production --base-href \"https://frameweb.structuralengine.com/\"
     - name: Deploy 
       uses: JamesIves/github-pages-deploy-action@3.7.1
       with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.TOKEN }}
         BRANCH: gh-pages
         FOLDER: dist
         CLEAN: true
