@@ -16,7 +16,7 @@ jobs:
     - name: Install NPM packages
       run: npm install
     - name: Build website
-      run: ng build --configuration production --base-href \"https://frameweb.structuralengine.com/\"
+      run: npm run build
     - name: Deploy 
       uses: JamesIves/github-pages-deploy-action@3.7.1
       with:
