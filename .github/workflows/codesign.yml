@@ -2,7 +2,7 @@ name: Code Signing
 
 on:
   push: 
-    branches: master
+    branches: main
 
 jobs:
   release:
@@ -21,14 +21,14 @@ jobs:
         with:
           node-version: 14.18.1
       - name: Npm install
-        run: npm install --build-from-resource
+        run: npm install
 
       - name: Build/release Electron app
         uses: samuelmeuli/action-electron-builder@v1
         with:
           # GitHub token, automatically provided to the action
           # (No need to define this secret in the repo settings)
-          build_script_name: 'nocopybuild:prod && npx electron-builder build --windows'
+          build_script_name: 'npm run build:prod && npx electron-builder build --windows'
           github_token: ${{ secrets.TOKEN }}
 
           windows_certs: ${{ secrets.CODESIGN }}
