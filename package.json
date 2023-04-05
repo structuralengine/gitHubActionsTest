@@ -1,6 +1,6 @@
 {
   "name": "web-dan-for-js",
-  "version": "1.13.14",
+  "version": "1.13.15",
   "scripts": {
     "ng": "ng",
     "start": "set NODE_OPTIONS=--openssl-legacy-provider && ng serve",
@@ -14,6 +14,7 @@
     "electron:windows": "set NODE_OPTIONS=--openssl-legacy-provider && npm run build:prod && npx electron-builder build --windows",
     "electron:windows-actions": "npm run build:prod && npx electron-builder build --windows",
     "build:prod": "ng build --configuration production --optimization --outputHashing=all --sourceMap=false --namedChunks=false --extract-licenses --vendorChunk=false --build-optimizer && webpack --config webpack.electron.prod.config.js && npm run filecopy1 && npm run filecopy2",
+    "build:win": "npm run build:prod",
     "start:prod": "electron dist/index.js",
     "filecopy1": "node -e \"require('fs').copyFileSync('dev-app-update.yml', 'dist/dev-app-update.yml')\"",
     "filecopy2": "node -e \"require('fs').copyFileSync('app-update.yml', 'dist/app-update.yml')\""
