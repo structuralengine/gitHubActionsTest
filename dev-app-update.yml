@@ -1,4 +1,4 @@
 owner: structuralengine
-repo: WebDanforJS
+repo: gitHubActionsTests
 provider: github
 updaterCacheDirName: web-dan-for-js-updater

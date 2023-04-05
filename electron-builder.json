@@ -54,7 +54,7 @@
     {
       "provider": "github",
       "owner": "structuralengine",
-      "repo": "WebDanforJS"
+      "repo": "gitHubActionsTest"
     }
   ]
 }
